@@ -3,8 +3,7 @@ import { io } from "socket.io-client";
 import "./App.css";
 
 
-const socket = io("http://localhost:3000", {
-});
+const socket = io("https://chat-backend-l4lu.onrender.com");
 
 function App() {
 
@@ -366,7 +365,7 @@ const orderedMessages = [...filteredMessages].sort((a, b) => a.id - b.id);
   formData.append("user", username);
 
   try {
-    const response = await fetch("http://localhost:3000/upload", {
+   const response = await fetch("https://chat-backend-l4lu.onrender.com/upload", {
       method: "POST",
       body: formData
     });
