@@ -1,0 +1,193 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY SIEMPRE OSCURO 🔥 */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #2c3e50; /* 🔥 SIEMPRE oscuro */
+}
+
+/* CONTENEDOR */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* 🌙 DARK MODE */
+.dark {
+  color: white;
+}
+
+.dark .sidebar {
+  background: #1f2a36;
+}
+
+.dark .chat {
+  background: #34495e;
+}
+
+.dark .inputArea {
+  background: #2c3e50;
+}
+
+.dark .other {
+  background: #555;
+  color: white;
+}
+
+/* 🌞 LIGHT MODE (SOLO INTERNO 👇) */
+.light {
+  color: black;
+}
+
+/* 🔥 SOLO CAMBIAMOS EL CHAT */
+.light .chat {
+  background: #ffffff;
+}
+
+.light .sidebar {
+  background: #f4f4f4;
+  color: black;
+}
+
+.light .inputArea {
+  background: #ffffff;
+}
+
+.light .other {
+  background: #e5e5ea;
+  color: black;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 260px;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+}
+
+.user {
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.user:hover {
+  background: rgba(0,0,0,0.1);
+}
+
+/* CHAT */
+.chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* MENSAJES */
+.messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* BURBUJAS */
+.message {
+  max-width: 60%;
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  gap: 8px;
+}
+
+/* BURBUJAS */
+.message {
+  max-width: 60%;
+  padding: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* TU MENSAJE (DERECHA) */
+.me {
+  align-self: flex-end;
+  background: #4caf50;
+  color: white;
+}
+
+/* OTROS (IZQUIERDA) */
+.other {
+  align-self: flex-start;
+  background: #e5e5ea;
+  color: black;
+}
+
+/* SELECCIONADO */
+.selected {
+  outline: 2px solid red;
+  opacity: 0.7;
+}
+
+/* PROPIO */
+.me {
+  align-self: flex-end;
+  background: #4caf50;
+  color: white;
+}
+
+/* INPUT */
+.inputArea {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.inputArea input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.inputArea button {
+  margin-left: 10px;
+  padding: 10px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* LOGIN */
+.loginContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🔥 LOGIN SIEMPRE CENTRADO Y BONITO */
+.loginBox {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.dark .loginBox {
+  background: #34495e;
+  color: white;
+}
