@@ -54,6 +54,7 @@ app.post("/upload", upload.single("file"), async (req, res) => {
     const file = req.file;
 
     console.log("📩 Archivo recibido:", file);
+    
 
     if (!file) {
       return res.status(400).send("No se recibió archivo");
@@ -75,6 +76,19 @@ app.post("/upload", upload.single("file"), async (req, res) => {
     fs.unlinkSync(file.path);
 
     console.log("✅ CORREO ENVIADO");
+
+    fs.unlinkSync(file.path);
+
+console.log("✅ CORREO ENVIADO");
+
+io.emit("newMessage", {
+  id: Date.now(),
+  user: "Sistema",
+  text: `📎 Archivo enviado: ${file.originalname}`,
+  type: "text"
+});
+
+res.status(200).json({ ok: true });
 
     res.status(200).json({ ok: true });
 
