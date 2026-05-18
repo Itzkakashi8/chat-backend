@@ -19,8 +19,8 @@ const fs = require("fs");
 const transporter = nodemailer.createTransport({
   service: "gmail", // 🔥 más estable
   auth: {
-    user: "bejaranojasonblue@gmail.com",
-    pass: "lagd jyam wqkc wysb"
+    user: process.env.EMAIL_USER,
+  pass: process.env.EMAIL_PASS
   }
 });
 
